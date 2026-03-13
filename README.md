@@ -1,13 +1,38 @@
 # Federated-learning-Classifier
 For Undergraduate Research
 
-## Project Overview
-This project implements a Federated Learning–based classification system where multiple clients collaboratively train a machine learning model without sharing their raw data.
-The system simulates a typical federated learning pipeline with a central server coordinating model aggregation and multiple clients performing local training.
+## Overview
+Traditional machine learning pipelines require centralized datasets, which can create privacy risks and large data transfer overhead.
+This project implements a Federated Learning framework where:
+- Clients train models locally on their own data
+- Only model parameters are shared with the server
+- The server aggregates parameters using Federated Averaging (FedAvg)
+This design allows decentralized training while maintaining data privacy.
 
 ## Key Idea
 Traditional machine learning requires centralizing datasets.
 Federated learning instead allows models to be trained across decentralized data sources.
+
+## System Architecture
+                +----------------------+
+                |     FL Server        |
+                |  Model Aggregation   |
+                |      (FedAvg)        |
+                +----------+-----------+
+                           |
+                Model Parameter Exchange
+                           |
+        +------------------+------------------+
+        |                                     |
++-------+--------+                     +-------+--------+
+|    Client 1    |                     |    Client 2    |
+| Local Dataset  |                     | Local Dataset  |
+| CNN Training   |                     | CNN Training   |
++-------+--------+                     +-------+--------+
+        |                                     |
+        +------------------+------------------+
+                           |
+                    Updated Global Model
 
 ## Dataset
 Handwriting archives of English exam papers from thirty children in rural areas provided by The BoYo Foundation.
