@@ -22,15 +22,15 @@ Federated learning instead allows models to be trained across decentralized data
                            |
                 Model Parameter Exchange
                            |
-        +------------------+------------------+
-        |                                     |
-+-------+--------+                     +-------+--------+
-|    Client 1    |                     |    Client 2    |
-| Local Dataset  |                     | Local Dataset  |
-| CNN Training   |                     | CNN Training   |
-+-------+--------+                     +-------+--------+
-        |                                     |
-        +------------------+------------------+
+            +--------------+--------------+
+            |                             |
+    +-------+--------+            +-------+--------+
+    |    Client 1    |            |    Client 2    |
+    | Local Dataset  |            | Local Dataset  |
+    | CNN Training   |            | CNN Training   |
+    +-------+--------+            +-------+--------+
+            |                             |
+            +--------------+--------------+
                            |
                     Updated Global Model
 
