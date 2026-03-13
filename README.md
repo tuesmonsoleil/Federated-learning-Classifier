@@ -33,6 +33,27 @@ Federated learning instead allows models to be trained across decentralized data
             +--------------+--------------+
                            |
                     Updated Global Model
+## Federated Learning Workflow
+Initialize Global Model
+        |
+        v
+Distribute Model to Clients
+        |
+        v
+Clients Perform Local Training
+        |
+        v
+Upload Model Parameters
+        |
+        v
+Server Aggregates Models (FedAvg)
+        |
+        v
+Update Global Model
+        |
+        v
+Next Communication Round
+
 
 ## Dataset
 Handwriting archives of English exam papers from thirty children in rural areas provided by The BoYo Foundation.
