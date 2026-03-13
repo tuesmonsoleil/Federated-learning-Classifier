@@ -33,28 +33,7 @@ Federated learning instead allows models to be trained across decentralized data
             +--------------+--------------+
                            |
                     Updated Global Model
-## Federated Learning Workflow
-Initialize Global Model
-        |
-        v
-Distribute Model to Clients
-        |
-        v
-Clients Perform Local Training
-        |
-        v
-Upload Model Parameters
-        |
-        v
-Server Aggregates Models (FedAvg)
-        |
-        v
-Update Global Model
-        |
-        v
-Next Communication Round
-
-
+                    
 ## Dataset
 Handwriting archives of English exam papers from thirty children in rural areas provided by The BoYo Foundation.
 
@@ -70,16 +49,17 @@ Handwriting archives of English exam papers from thirty children in rural areas 
 - PyTorch
 - CNN classifier
 - Fully connected neural network
-### Federated Learning
+### Distributed System
 - Federated Averaging (FedAvg)
 - Multi-client training simulation
 - Global model synchronization
+- Parameter server architecture 
 ### Backend
 - Flask REST API server
 - HTTP communication
 ### Data Handling
-- Pickle for model serialization
-- Gzip compression for network transfer
+- Pickle (model serialization)
+- Gzip compression
 
 ## System Components
 ### Client
