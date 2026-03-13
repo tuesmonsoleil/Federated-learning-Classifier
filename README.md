@@ -70,3 +70,112 @@ Handwriting archives of English exam papers from thirty children in rural areas 
 - Receives model parameters
 - Performs weight aggregation
 - Distributes global model
+
+## Project Structure
+    Federated-learning-Classifier
+    │
+    ├── server
+    │   ├── server.py
+    │   └── aggregation.py
+    │
+    ├── client
+    │   ├── client.py
+    │   └── training.py
+    │
+    ├── models
+    │   ├── CNN
+    │   └── SimpleNN
+    │
+    ├── CV
+    │   └── extract.py
+    │
+    └── README.md
+
+## Installation
+Clone the repository
+```
+git clone https://github.com/yourname/Federated-learning-Classifier.git
+cd Federated-learning-Classifier
+```
+Install dependencies
+```
+pip install -r requirements.txt
+```
+Dependencies typically include:
+```
+torch
+flask
+numpy
+pickle
+gzip
+```
+
+## Usage
+### 1. Start the Federated Learning Server
+```
+python server/server.py
+```
+The server will start a Flask API responsible for:
+- receiving model parameters
+- aggregating models
+- distributing the global model
+### 2. Run a Client
+```
+python client/client.py
+```
+Each client will:
+1. download the global model
+2. train locally on its dataset
+3. upload updated model parameters
+4. receive the updated global model
+
+### 3. Training Loop
+The federated training process repeats for multiple communication rounds.
+Example:
+```
+Round 1
+Client Training → Upload → Server Aggregation
+
+Round 2
+Client Training → Upload → Server Aggregation
+```
+
+## Training Configuratio
+## Training Configuration
+
+The following configuration was used for federated training.
+
+| Parameter | Value |
+|-----------|------|
+| Number of Clients | 10 |
+| Communication Rounds | 50 |
+| Local Epochs | 5 |
+| Batch Size | 32 |
+| Optimizer | SGD |
+| Learning Rate | 0.01 |
+| Model Architecture | CNN / SimpleNN |
+
+Each client trains the model locally on its private dataset before sending updated parameters to the server for aggregation.
+
+## Federated Averaging
+The global model is computed by averaging client parameters.
+$w_{global} = \frac{1}{N} \sum_{i=1}^{N} w_i$
+Where
+- w_{i} is the model from client i
+- 𝑁 is the number of participating clients
+This allows the server to update the model without accessing raw training data.
+
+## Example Use Cases
+Federated learning is useful in domains where data privacy is critical:
+- Healthcare AI
+- Mobile device learning
+- Financial data modeling
+- Edge AI systems
+
+## Future Improvements
+Possible extensions of this project include:
+- Differential Privacy integration
+- Secure aggregation
+- Asynchronous federated learning
+- Cross-device federated training
+- Scaling to larger client networks
