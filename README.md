@@ -75,12 +75,11 @@ Handwriting archives of English exam papers from thirty children in rural areas 
     Federated-learning-Classifier
     │
     ├── server
-    │   ├── server.py
-    │   └── aggregation.py
+    │   └── app.py
     │
     ├── client
-    │   ├── client.py
-    │   └── training.py
+    │   ├── traint.py
+    │   └── train2.py
     │
     ├── models
     │   ├── CNN
@@ -88,6 +87,8 @@ Handwriting archives of English exam papers from thirty children in rural areas 
     │
     ├── CV
     │   └── extract.py
+    │
+    ├── result
     │
     └── README.md
 
@@ -113,7 +114,7 @@ gzip
 ## Usage
 ### 1. Start the Federated Learning Server
 ```
-python server/server.py
+python server/app.py
 ```
 The server will start a Flask API responsible for:
 - receiving model parameters
@@ -121,7 +122,8 @@ The server will start a Flask API responsible for:
 - distributing the global model
 ### 2. Run a Client
 ```
-python client/client.py
+python client/train.py
+python client/train2.py
 ```
 Each client will:
 1. download the global model
