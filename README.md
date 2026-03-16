@@ -74,6 +74,8 @@ Handwriting archives of English exam papers from thirty children in rural areas 
 ## Project Structure
     Federated-learning-Classifier
     │
+    ├──requirements.txt
+    │
     ├── server
     │   └── app.py
     │
