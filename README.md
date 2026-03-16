@@ -151,10 +151,9 @@ The following configuration was used for federated training.
 
 | Parameter | Value |
 |-----------|------|
-| Number of Clients | 10 |
-| Communication Rounds | 50 |
-| Local Epochs | 5 |
-| Batch Size | 32 |
+| Number of Clients | 2 |
+| Local Epochs | 10 |
+| Batch Size | 64 |
 | Optimizer | SGD |
 | Learning Rate | 0.01 |
 | Model Architecture | CNN / SimpleNN |
