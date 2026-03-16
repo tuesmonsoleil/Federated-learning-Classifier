@@ -1,5 +1,5 @@
 # Federated-learning-Classifier
-For Undergraduate Research
+For Undergraduate Research (Python >= 3.8)
 
 ## Overview
 Traditional machine learning pipelines require centralized datasets, which can create privacy risks and large data transfer overhead.
