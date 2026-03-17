@@ -85,8 +85,8 @@ Handwriting archives of English exam papers from thirty children in rural areas 
     │   └── app.py
     │
     ├── client
-    │   ├── traint.py
-    │   └── train2.py
+    │   ├── client_1.py
+    │   └── client_2.py
     │
     ├── models
     │   ├── CNN.py
