@@ -14,6 +14,7 @@ Traditional machine learning requires centralizing datasets.
 Federated learning instead allows models to be trained across decentralized data sources.
 
 ## System Architecture
+### Client → local training → send weights → Server → aggregation → broadcast
                 +----------------------+
                 |     FL Server        |
                 |  Model Aggregation   |
@@ -172,17 +173,8 @@ Where
 - 𝑁 is the number of participating clients
 This allows the server to update the model without accessing raw training data.
 
-## Example Use Cases
-Federated learning is useful in domains where data privacy is critical:
-- Healthcare AI
-- Mobile device learning
-- Financial data modeling
-- Edge AI systems
-
 ## Future Improvements
 Possible extensions of this project include:
 - Differential Privacy integration
-- Secure aggregation
-- Asynchronous federated learning
 - Cross-device federated training
 - Scaling to larger client networks
