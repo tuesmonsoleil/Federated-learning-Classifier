@@ -75,6 +75,10 @@ Handwriting archives of English exam papers from thirty children in rural areas 
     Federated-learning-Classifier
     │
     ├──requirements.txt
+    ├── README.md
+    │
+    ├── configs/
+    │   └── configs.yaml
     │
     ├── server
     │   └── app.py
@@ -84,10 +88,10 @@ Handwriting archives of English exam papers from thirty children in rural areas 
     │   └── train2.py
     │
     ├── models
-    │   ├── CNN
-    │   └── SimpleNN
+    │   ├── CNN.py
+    │   └── SimpleNN.py
     │
-    ├── CV
+    ├── preprocessing
     │   └── extract.py
     │
     ├── result
